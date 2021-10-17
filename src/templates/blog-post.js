@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Image from "gatsby-image"
 import parse from "html-react-parser"
+import { FacebookProvider, Comments } from 'react-facebook';
 
 // We're using Gutenberg so we need the block styles
 // these are copied into this project due to a conflict in the postCSS
@@ -48,6 +49,12 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
         {!!post.content && (
           <section itemProp="articleBody">{parse(post.content)}</section>
         )}
+
+        <hr />
+
+        <FacebookProvider appId="1588980577981977">
+          <Comments href={window.location.href} width="100%" />
+        </FacebookProvider>
 
         <hr />
 
@@ -103,6 +110,7 @@ export const pageQuery = graphql`
       content
       title
       date(formatString: "MMMM DD, YYYY")
+      uri
 
       featuredImage {
         node {

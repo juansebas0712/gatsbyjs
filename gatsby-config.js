@@ -7,6 +7,7 @@
  */
 
 module.exports = {
+  pathPrefix: '/gatsbyjs',
   /**
    * Adding plugins to this array adds them to your Gatsby site.
    *
@@ -28,7 +29,7 @@ module.exports = {
         // the only required plugin option for WordPress is the GraphQL url.
         url:
           process.env.WPGRAPHQL_URL ||
-          `https://wpgatsbydemo.wpengine.com/graphql`,
+          `http://juansapariciolocal.local/graphql`,
       },
     },
 

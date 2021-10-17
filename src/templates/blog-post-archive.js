@@ -52,6 +52,7 @@ const BlogIndex = ({
                 </header>
                 <section itemProp="description">{parse(post.excerpt)}</section>
               </article>
+              <hr></hr>
             </li>
           )
         })}
