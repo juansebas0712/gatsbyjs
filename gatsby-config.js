@@ -69,6 +69,15 @@ module.exports = {
       },
     },
 
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "G-P8YHGPS71C", // Google Analytics / GA
+        ],
+      }
+    },
+
     // See https://www.gatsbyjs.com/plugins/gatsby-plugin-react-helmet/?=gatsby-plugin-react-helmet
     `gatsby-plugin-react-helmet`,
 

@@ -16,6 +16,8 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+let currentURL = typeof window !== "undefined" ? window.location.href : ''; 
+
 const BlogPostTemplate = ({ data: { previous, next, post } }) => {
   const featuredImage = {
     fluid: post.featuredImage?.node?.localFile?.childImageSharp?.fluid,
@@ -53,7 +55,7 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
         <hr />
 
         <FacebookProvider appId="1588980577981977">
-          <Comments href={window.location.href} width="100%" />
+          <Comments href={currentURL} width="100%" />
         </FacebookProvider>
 
         <hr />
